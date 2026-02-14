@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalTime;
 
 @WebServlet("/services")
 public class services extends HttpServlet {
@@ -18,22 +19,28 @@ public class services extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String val = request.getParameter("roomcost");
+		
+		Bill bill = new Bill();
+		
+		bill.setName(request.getParameter("name"));
+		bill.setNic(request.getParameter("nic"));
+		bill.setId();
+		bill.setRoomtype(request.getParameter("rm"));
+		bill.setRoomcost(Double.parseDouble(request.getParameter("roomcost")));
+		bill.setAddoncont(Double.parseDouble(request.getParameter("addon")));
+		bill.setDiscount(Double.parseDouble(request.getParameter("discount")));
+		bill.setServiceChange(Double.parseDouble(request.getParameter("servicech")));
+		bill.setVat(Double.parseDouble(request.getParameter("tax")));
+		bill.setFinalTotal(Double.parseDouble(request.getParameter("final")));
 		
 		
+		
+		
+
+		
+			
 			
 	}
 	
-	class model{
-		
-		private String name;
-		private String nic;
-		private String roomtype;
-		private double roomCost;
-		private double addonCost;
-		private double discount;
-		private double serviceCharge;
-		
-	}
 
 }

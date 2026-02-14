@@ -97,6 +97,6 @@ public class HotelBillServlet extends HttpServlet {
                               "&discount=" + discount + 
                               "&servicech=" + serviceCharge + 
                               "&tax=" + vat + 
-                              "&final=" + finalTotal);
+                              "&final=" + finalTotal+"&name="+name+"&nic="+NIC+"&rm="+roomtype);
     }
 }
