@@ -111,6 +111,9 @@
                         }
                     %>
                     <form action="services" method="post">
+                    <input type="hidden" name="name" value="<%= request.getParameter("name") %>">
+    				<input type="hidden" name="nic" value="<%= request.getParameter("nic") %>">
+   					 <input type="hidden" name="rm" value="<%= request.getParameter("rm") %>">
                         <div class="mb-3">
                            <label class="form-label">Room Cost : </label>
                            <input type="text" class="form-control" name="roomcost" value="<%= roomCost %>" readonly >
